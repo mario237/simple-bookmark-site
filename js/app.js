@@ -17,26 +17,31 @@ else
 
 
 function addBook() {
-    var url = websiteURL.value;
-    var book = {};
-
-    if (url.includes('https://') || url.includes('http://')) {
-        book = {
-            bookName: bookName.value,
-            websiteURL: url
-        }
-
-        booksList.push(book);
-
-        localStorage.setItem('booksList', JSON.stringify(booksList));
-
-        displayBooks();
-
-        clearForm();
+    if (formIsEmpty()) {
+        alert('All form fields are required');
     } else {
-        alert('invalid url');
+        var url = websiteURL.value;
+        var book = {};
+
+        if (url.includes('https://') || url.includes('http://')) {
+            book = {
+                bookName: bookName.value,
+                websiteURL: url
+            }
+
+            booksList.push(book);
+
+            localStorage.setItem('booksList', JSON.stringify(booksList));
+
+            displayBooks();
+
+            clearForm();
+        } else {
+            alert('invalid url');
+        }
     }
 }
+
 
 function clearForm() {
     bookName.value = '';
@@ -69,4 +74,12 @@ function deleteBook(position) {
     booksList.splice(position, 1);
     localStorage.setItem('booksList', JSON.stringify(booksList));
     displayBooks();
+}
+
+
+function formIsEmpty() {
+    if (bookName.value == '' || websiteURL.value == '')
+        return true;
+    else
+        return false;
 }
