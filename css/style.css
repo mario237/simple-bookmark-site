@@ -1,0 +1,64 @@
+body{
+    color: black;
+}
+
+header{
+    width: 80%;
+    margin: 20px auto;
+}
+
+h3{
+    color: #aaa;
+    padding: 25px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #999;
+    font-weight: 700;
+}
+
+.from-container{
+    background-color: #eee;
+    width: 80%;
+    margin: auto;
+}
+
+
+
+label{
+    margin: 15px auto;
+    font-weight: bold;
+    color: #333;
+}
+
+#submitBtn{
+    width: 70px;
+    margin: 15px auto;
+}
+
+.book-item{
+    background-image: linear-gradient(#EEE,#FFF);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.book-item h2{
+    color: #333;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.book-item a{
+    margin: 0 15px;
+}
+
+footer p{
+    padding: 15px 0;
+    border-top: 1px solid #999;
+    font-weight: bold;
+    color: #aaa;
+    width: 80%;
+    margin: auto;
+
+}
